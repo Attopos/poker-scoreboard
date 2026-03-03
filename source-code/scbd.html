@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>斗地主记分板</title>
+    <link rel="stylesheet" href="scbd-style.css">
+    <script src="scbd-script.js" defer></script>
+</head>
+<body>
+    <h1>斗地主记分板</h1>
+    <div id="scoreboard">
+        <div class="player" id="player1">
+            <img src="../images/ss.jpg" alt="帅帅">
+            <h2>帅帅</h2>
+            <p class="score">10</p>
+        </div>
+
+        <div class="player" id="player2">
+            <img src="../images/ff.jpg" alt="昉昉">
+            <h2>昉昉</h2>
+            <p class="score">10</p>
+        </div>
+
+        <div class="player" id="player3">
+            <img src="../images/xx.jpg" alt="星星">
+            <h2>星星</h2>
+            <p class="score">10</p>
+        </div>
+    </div>
+
+    <div id="controls">
+        <div class="choiceBox">
+            <div class="optionGroup">
+                <h3>选择地主</h3>
+                <div class="optionRow">
+                    <label class="landlordOption">
+                        <input type="radio" name="landlord" value="1" checked>
+                        <img src="../images/ss.jpg" alt="帅帅">
+                    </label>
+                    <label class="landlordOption">
+                        <input type="radio" name="landlord" value="2">
+                        <img src="../images/ff.jpg" alt="昉昉">
+                    </label>
+                    <label class="landlordOption">
+                        <input type="radio" name="landlord" value="3">
+                        <img src="../images/xx.jpg" alt="星星">
+                    </label>
+                </div>
+            </div>
+
+            <div class="optionGroup">
+                <h3>胜方</h3>
+                <div class="optionRow">
+                    <label class="winnerOption">
+                        <input type="radio" name="winner" value="landlord" checked>
+                        <img src="../images/landlord.jpg" alt="地主胜">
+                    </label>
+                    <label class="winnerOption">
+                        <input type="radio" name="winner" value="farmer">
+                        <img src="../images/farmer.jpg" alt="农民胜">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button id="submitBtn">提交本局</button>
+        <button id="undoBtn" type="button">撤销上一局</button>
+        <button id="resetBtn" type="button">重置全部</button>
+    </div>
+
+    <div id="logSection">
+        <h3>游戏日志</h3>
+        <div class="logTableWrap">
+            <table id="gameLogTable">
+                <thead>
+                    <tr>
+                        <th>局数</th>
+                        <th>地主</th>
+                        <th>胜方</th>
+                        <th>分数变化</th>
+                        <th>总分</th>
+                        <th>时间</th>
+                    </tr>
+                </thead>
+                <tbody id="gameLogBody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
